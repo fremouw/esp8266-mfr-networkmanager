@@ -1,0 +1,215 @@
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+#goToConfiguration {
+    font-family: icon;
+    font-size: 1.0em;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline;
+    cursor: pointer;
+    color: #666;
+}
+
+.navigation li + li:before {
+    content: " | ";
+}
+
+.home {
+    /*color: #ccc;*/
+    color: #000000;
+    font-weight: bold;
+    /*font-family: icon;*/
+    font-size: 1.5em;
+    float: left;
+    /*padding: 5px;*/
+}
+
+.footer {
+    padding-top: 5px;
+    border-top: 1px solid #cccccc;
+    text-align: right;
+    color: #666;
+}
+
+#main {
+    padding-top: 0;
+    width: 360px;
+    margin: 0 auto;
+    font-family: lato;
+    color: #333;
+}
+
+.content {
+    padding-bottom: 30px;
+    border-top: 1px solid #cccccc;
+    padding-top: 30px;
+}
+
+#main button:focus {
+    outline: 0;
+}
+
+#main button:hover {
+    background-color: #eee;
+}
+
+#main button:active {
+    background-color: #666;
+    color: white;
+}
+
+#smartmeter {
+    display: none;
+}
+
+#network {
+    display: none;
+}
+
+#finished {
+    display: none;
+}
+
+#wirelessProgress {
+    display: none;
+}
+
+.input {
+    border: 1px solid #cccccc;
+    font-family: icon;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.list {
+    border: none;
+    border: 1px solid #cccccc;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.list option {
+    padding: 3px;
+}
+
+.list select:focus {
+    outline: 0;
+}
+
+.input span {
+    margin: 5px;
+    border-right: 1px solid #cccccc;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.input input {
+    border: none;
+    vertical-align: middle;
+    width: 320px;
+}
+
+.input input:focus {
+    outline: 0;
+}
+
+.checkbox {
+    padding-bottom: 30px;
+}
+
+.submit {
+    text-align: right;
+}
+
+.button {
+    border: 1px solid #cccccc;
+    background-color: transparent;
+    color: black;
+    width: 70px;
+    height: 25px;
+    font-weight: bold;
+    font-family: lato;
+}
+
+.refresh {
+    padding-bottom: 15px;
+    text-align: right;
+}
+
+.refresh button {
+    font-family: icon;
+    border: 1px solid #cccccc;
+    background-color: transparent;
+    color: black;
+    width: 25px;
+    height: 25px;
+}
+
+.spinner {
+    text-align: center;
+    font-family: icon;
+    color: #333;
+    font-size: 5em;
+    -webkit-animation:spin 2s ease-in-out infinite;
+    -moz-animation:spin 2s ease-in-out infinite;
+    animation:spin 2s ease-in-out infinite;
+}
+
+#error {
+    margin-top: 15px;
+    color: #ED4B54;
+}
+
+#progressMessage {
+    text-align: center;
+}
+
+#setup {
+    position: relative;
+}
+
+#loadNetworks {
+    font-family: icon;
+    text-align: center;
+    font-family: icon;
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    -moz-animation: spin 1s ease-in-out infinite;
+    animation: spin 1s ease-in-out infinite;
+}
+
+#finished div {
+    text-align: center;
+}
+
+.finished {
+    text-align: center;
+    font-family: icon;
+    color: green;
+    font-size: 5em;
+}
+
+a {
+    color: #666;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { transform:rotate(-360deg); } }

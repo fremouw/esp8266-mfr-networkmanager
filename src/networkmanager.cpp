@@ -93,8 +93,6 @@ void NetworkManager::setup(String& ssid, String& password) {
 
         generateSSID(apSsid);
 
-        apPassword = "sparkfun";
-
         WiFi.softAP(apSsid.c_str(), apPassword.c_str());
 
         delay(100);
@@ -113,7 +111,7 @@ void NetworkManager::setup(String& ssid, String& password) {
         });
 
         Serial.print("Created AP with SSID: ");
-        Serial.println(ssid);
+        Serial.println(apSsid);
 
         Serial.print("IP Address: ");
         Serial.println(WiFi.softAPIP());
@@ -238,7 +236,8 @@ void NetworkManager::loop() {
             }
         }
         break;
-        case WantsToRestart: {
+        case WantsToRestart
+: {
             Serial.println("Rebooting...");
 
             delay(3000);
@@ -304,7 +303,7 @@ void NetworkManager::loop() {
 void NetworkManager::generateSSID(String& ssid) {
     String _ssid = "ESP1-";
 
-    _ssid.concat(ESP.getChipId());
+    _ssid += ESP.getChipId();
 
     ssid = _ssid;
 }

@@ -1,0 +1,27 @@
+{
+    "name": "esp82622-mfr-networkmanager",
+    "version": "1.0.0",
+    "description": "esp82622-mfr-networkmanager.",
+    "license": "SEE LICENSE IN license",
+    "scripts": {
+        "start": "index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fremouw/esp8266-mfr-networkmanager.git"
+    },
+    "main": "gulpfile.js",
+    "devDependencies": {
+        "gulp": "~3.9.0",
+        "gulp-jshint": "~1.5.1",
+        "gulp-nodemon": "^2.0.4",
+        "gulp-uglify": "~1.5.1",
+        "gulp-gzip": "~1.4.0",
+        "gulp-livereload": "~3.8.1",
+        "del": "~2.2.0",
+        "gulp-htmlmin": "~2.0.0",
+        "gulp-clean-css": "~2.0.10"
+    },
+    "dependencies": {
+    }
+}
