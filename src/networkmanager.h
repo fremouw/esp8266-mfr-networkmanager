@@ -1,15 +1,18 @@
-#ifndef P1_NETWORKMANAGER_H_
-#define P1_NETWORKMANAGER_H_
-
 #include <WString.h>
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <DNSServer.h>
-#include "config.h"
+#include <mfr_configuration.h>
+
+#ifndef MFR_NETWORKMANAGER_H_
+#define MFR_NETWORKMANAGER_H_
 
 class NetworkManager {
 public:
-        NetworkManager(Config& config);
+        static const String kSSIDKey;
+        static const String kPasswordKey;
+
+        NetworkManager(mfr::Configuration& config);
         ~NetworkManager();
 
         void setup(String& ssid, String& password);
@@ -34,7 +37,7 @@ public:
         void getCurrentState(state& state);
 
 private:
-        Config& config;
+        mfr::Configuration& config;
         AsyncWebServer *server;
         DNSServer      *dnsServer;
         AsyncEventSource *events;
@@ -77,4 +80,4 @@ private:
         void generateSSID(String& ssid);
 };
 
-#endif // P1_NETWORKMANAGER_H_
+#endif // MFR_NETWORKMANAGER_H_

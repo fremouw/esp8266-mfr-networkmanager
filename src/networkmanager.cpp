@@ -4,7 +4,10 @@
 #include <EEPROM.h>
 #include <ArduinoJson.h>
 
-NetworkManager::NetworkManager(Config& config) : config(config) {
+const String NetworkManager::kSSIDKey = "wSSID";
+const String NetworkManager::kPasswordKey = "wPassword";
+
+NetworkManager::NetworkManager(mfr::Configuration& config) : config(config) {
     currentState = WantsToIdle;
     server = nullptr;
     dnsServer = nullptr;
@@ -275,9 +278,10 @@ void NetworkManager::loop() {
 
                 events->send("{\"rv\": 0}", "joinedNetwork");
 
-                config.setSSID( newSsid );
+                config.set(kSSIDKey, newSsid);
+
                 if(newPassword.length() > 0)
-                    config.setPassword( newPassword );
+                    config.set(kPasswordKey, newPassword );
 
                 Serial.println(newSsid);
                 Serial.println(newPassword);
